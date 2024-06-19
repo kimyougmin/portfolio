@@ -35,8 +35,8 @@
 }
 .section.black{
   background-color: #222831;
-  height: 200vh;
-  align-content: center;
+  height: 580vh;
+  padding: 10vh 0 10vh 0;
 }
 .content .section.hero {
   background-image: url(https://images.unsplash.com/photo-1589848315097-ba7b903cc1cc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
