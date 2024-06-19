@@ -9,6 +9,7 @@ import PhoneAndroidRoundedIcon from '@mui/icons-material/PhoneAndroidRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 function App() {
     gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +24,7 @@ function App() {
                     markers: true
                 }
             })
-                .to("img", {
+                .to(".zoomImg", {
                     scale: 2,
                     z: 350,
                     transformOrigin: "center center",
@@ -73,9 +74,13 @@ function App() {
                   <section className="section gradient-blue">
                       <Skills />
                   </section>
+                  <section className="section black">
+                      <Projects />
+                  </section>
               </div>
               <div className="image-container">
                   <img
+                      className={'zoomImg'}
                       src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp"
                       alt="image"/>
               </div>

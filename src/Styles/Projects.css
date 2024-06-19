@@ -1,0 +1,43 @@
+.projects{
+    width: 80%;
+    padding-top: 3vh;
+    margin: 5vh 10% 5vh 10%;
+    height: 70vh;
+    background-color: #DDDDDD;
+    border-radius: 30px;
+}
+
+.projects > .projects-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.projects > .projects-count{
+    text-align: center;
+    color: gray;
+}
+.projects-body {
+    display: flex;
+    padding: 2vh 5vh 2vh 5vh;
+    border-bottom: 1px solid #222831;
+}
+.projects-body img{
+    margin-right: 20px;
+    width: 60%;
+    height: 40vh;
+}
+.projects-body > div > .body-content{
+    width: 100%;
+    line-height: 140%;
+}
+.projects-body > div > .body-readme{
+    margin-top: 5vh;
+    width: 50%;
+    height: 5vh;
+    color: white;
+    font-size: 20px;
+    background-color: #222831;
+    border-radius: 10px;
+    align-content: center;
+    padding-left: 5%;
+}

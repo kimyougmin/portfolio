@@ -1,14 +1,14 @@
 import React from 'react';
-import css from '../langIcon/icon-css.png';
-import html from '../langIcon/icon-html.png';
-import js from '../langIcon/icon-js.png';
-import react from '../langIcon/icon-React.png';
-import docker from '../langIcon/icon-docker.png';
-import node from '../langIcon/icon-node.png';
-import nginx from '../langIcon/icon-nginx.png';
-import ubuntu from '../langIcon/icon-ubuntu.png';
-import mysql from '../langIcon/icon-mysql-skils.png';
-import github from '../langIcon/icon-github.png';
+import css from '../Imgs/langIcon/icon-css.png';
+import html from '../Imgs/langIcon/icon-html.png';
+import js from '../Imgs/langIcon/icon-js.png';
+import react from '../Imgs/langIcon/icon-React.png';
+import docker from '../Imgs/langIcon/icon-docker.png';
+import node from '../Imgs/langIcon/icon-node.png';
+import nginx from '../Imgs/langIcon/icon-nginx.png';
+import ubuntu from '../Imgs/langIcon/icon-ubuntu.png';
+import mysql from '../Imgs/langIcon/icon-mysql-skils.png';
+import github from '../Imgs/langIcon/icon-github.png';
 import '../Styles/Skills.css'
 
 interface  iconObject {
