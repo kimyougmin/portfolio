@@ -9,6 +9,7 @@ import nginx from '../Imgs/langIcon/icon-nginx.png';
 import ubuntu from '../Imgs/langIcon/icon-ubuntu.png';
 import mysql from '../Imgs/langIcon/icon-mysql-skils.png';
 import github from '../Imgs/langIcon/icon-github.png';
+import typescript from '../Imgs/langIcon/icon-TypeScript.png';
 import '../Styles/Skills.css'
 
 interface  iconObject {
@@ -20,7 +21,7 @@ interface  iconObject {
 
 function Skills() {
     const iconUrl: iconObject = {
-        frontEnd: [js, css, html, react],
+        frontEnd: [js, css, html, react, typescript],
         backEnd: node,
         server: [nginx, ubuntu, mysql],
         etc: [docker, github]
