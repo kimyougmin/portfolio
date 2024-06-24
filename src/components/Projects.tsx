@@ -58,10 +58,11 @@ function Projects() {
                 <p className={'project-title'}>RealTimeChat</p>
                 <p className={'project-count'}>1인</p>
                 <div className={'project-body'}>
-                    <img src={realtimechat}/>
+
+                    <img style={{margin: '0 15% 0 10%'}} src={realtimechat}/>
                     <div>
                         <p className={'body-content'}>해당 프로젝트는 실시간 채팅 기능을 구현 해봤습니다. DB에서 데이터를 조회하는 구조가 아닌 데이터가 생성되는 즉시 상대방에게 전송하는 실시간 구조를 공부하기 위해 시작한 프로젝트입니다. <br/><br/>특별한 라이브러리 사용은 하지 않았고 각각 클라이언트 별로 node.js를 이용하여 메시지를 전송하도록 구현했습니다. <br/><br/>채팅을 보내면 브로드캐스트 통신으로 모든 사용자에게 보내고 사용자 아이디에 uuid를 PK로 이용하여 해당 유저에게만 송신 되도록 구현했습니다.</p>
-                        <p onClick={() => {window.open('https://github.com/kimyougmin/RealTimeChat/blob/main/README.md')}} className={'body-readme'}>자세히 보기 {'->'} README</p>
+                        <p onClick={() => {window.open('')}} className={'body-readme'}>자세히 보기 {'->'} README</p>
                     </div>
                 </div>
                 <div className={'project-footer'}>
@@ -84,7 +85,7 @@ function Projects() {
                 <p className={'project-title'}>Long Project</p>
                 <p className={'project-count'}>5인</p>
                 <div className={'project-body'}>
-                    <img src={langProject}/>
+                    <img style={{margin: '0 10% 0 15%', paddingRight: '10%'}} src={langProject}/>
                     <div>
                         <p className={'body-content'}>대학 연구실에서 진행한 프로젝트입니다. 기수제를 도입하여 1년 단위로 유지보수, 업데이트를 진행합니다. 저는 1기 프론트 팀장으로 활동했고 Prosemirror 라이브러리를 이용하여 이미지를 핸들링하는 에디터를 만들었습니다.<br/><br/>
                             프론트 3명, 백 2명으로 진행되었고 각 팀장이 기술적은 부분을 구현했습니다.<br/><br/>
