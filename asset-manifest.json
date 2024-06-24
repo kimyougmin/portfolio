@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.43c879df.css",
+    "main.js": "/portfolio/static/js/main.434555eb.js",
+    "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
+    "static/media/portfolio.png": "/portfolio/static/media/portfolio.4f4037f5650a61f7e12b.png",
+    "static/media/skills-background.png": "/portfolio/static/media/skills-background.66bb6d6ae5ce775cab74.png",
+    "static/media/langProject.png": "/portfolio/static/media/langProject.545934ef407eff63ff52.png",
+    "static/media/about-me-background.png": "/portfolio/static/media/about-me-background.3ce725fd4f42b39a299b.png",
+    "static/media/pac.png": "/portfolio/static/media/pac.8428dd9de31776bdac65.png",
+    "static/media/passo1.png": "/portfolio/static/media/passo1.fb2531de162ad5a8fa21.png",
+    "static/media/coinai.png": "/portfolio/static/media/coinai.7714cf6f60600448b5ca.png",
+    "static/media/icon-nginx.png": "/portfolio/static/media/icon-nginx.9bca21aeb9537cf86fd4.png",
+    "static/media/icon-ubuntu.png": "/portfolio/static/media/icon-ubuntu.a74542561501903a28b8.png",
+    "static/media/textclassifier.png": "/portfolio/static/media/textclassifier.a46fbfb7285bfa79365e.png",
+    "static/media/realtimechat.png": "/portfolio/static/media/realtimechat.5c3b5c6b747db8675f37.png",
+    "static/media/icon-pytouch.png": "/portfolio/static/media/icon-pytouch.dc005d435d173cb2b05a.png",
+    "static/media/icon-tensorflow.png": "/portfolio/static/media/icon-tensorflow.d2145cc75dc411e52a95.png",
+    "static/media/icon-spring.png": "/portfolio/static/media/icon-spring.f0126d1c39d7ab5945e1.png",
+    "static/media/icon-php.png": "/portfolio/static/media/icon-php.d6e32fa469b805858684.png",
+    "index.html": "/portfolio/index.html",
+    "main.43c879df.css.map": "/portfolio/static/css/main.43c879df.css.map",
+    "main.434555eb.js.map": "/portfolio/static/js/main.434555eb.js.map",
+    "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43c879df.css",
+    "static/js/main.434555eb.js"
+  ]
+}
