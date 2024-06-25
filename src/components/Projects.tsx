@@ -62,7 +62,7 @@ function Projects() {
                     <img style={{margin: '0 15% 0 10%'}} src={realtimechat}/>
                     <div>
                         <p className={'body-content'}>해당 프로젝트는 실시간 채팅 기능을 구현 해봤습니다. DB에서 데이터를 조회하는 구조가 아닌 데이터가 생성되는 즉시 상대방에게 전송하는 실시간 구조를 공부하기 위해 시작한 프로젝트입니다. <br/><br/>특별한 라이브러리 사용은 하지 않았고 각각 클라이언트 별로 node.js를 이용하여 메시지를 전송하도록 구현했습니다. <br/><br/>채팅을 보내면 브로드캐스트 통신으로 모든 사용자에게 보내고 사용자 아이디에 uuid를 PK로 이용하여 해당 유저에게만 송신 되도록 구현했습니다.</p>
-                        <p onClick={() => {window.open('')}} className={'body-readme'}>자세히 보기 {'->'} README</p>
+                        <p onClick={() => {window.open('https://github.com/kimyougmin/RealTimeChat/blob/main/README.md')}} className={'body-readme'}>자세히 보기 {'->'} README</p>
                     </div>
                 </div>
                 <div className={'project-footer'}>
@@ -173,7 +173,7 @@ function Projects() {
                 <p className={'project-title'}>TextClassifier Api</p>
                 <p className={'project-count'}>1인</p>
                 <div className={'project-body'}>
-                    <img src={textClassifier}/>
+                    <img style={{margin: '0 7% 0 3%'}} src={textClassifier}/>
                     <div>
                         <p className={'body-content'}>4학년 졸업 작품으로 구현한 프로젝트입니다. 처음으로 AI를 사용한 프로젝트입니다. 구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning 후 텍스트를 분류하는 모델로 만들었습니다.
                             <br/><br/>
@@ -197,7 +197,7 @@ function Projects() {
                 <p className={'project-title'}>Portfolio</p>
                 <p className={'project-count'}>1인</p>
                 <div className={'project-body'}>
-                    <img src={portfolio}/>
+                    <img style={{margin: '0 7% 0 3%'}} src={portfolio}/>
                     <div>
                         <p className={'body-content'}>대학교 2학년 과제로 만든 웹입니다. 어린이 보호구역을 마커로 찍는 프로젝트입니다.  어린이 보호 구역의 위도, 경도를 제공 해주는 Api를 이용하여 제작하였습니다.
                             <br/><br/>
