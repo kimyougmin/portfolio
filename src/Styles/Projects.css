@@ -37,14 +37,13 @@
 }
 .project-body > div > .body-readme{
     margin-top: 5vh;
-    width: 50%;
     height: 5vh;
     color: white;
+    text-align: center;
     font-size: 20px;
     background-color: #222831;
     border-radius: 10px;
     align-content: center;
-    padding-left: 5%;
 }
 .project-footer{
     padding: 2vh 5vh 0 2vh;
