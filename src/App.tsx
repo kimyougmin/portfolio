@@ -8,11 +8,14 @@ import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
 import PhoneAndroidRoundedIcon from '@mui/icons-material/PhoneAndroidRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import github from '../src/Imgs/langIcon/icon-github.png';
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 
 function App() {
+    
     gsap.registerPlugin(ScrollTrigger);
+
     useEffect(() => {
             gsap.timeline({
                 scrollTrigger: {
@@ -39,7 +42,7 @@ function App() {
                     },
                     "<"
                 );
-    }, [])
+    }, []);
 
   return (
       <div>
@@ -72,10 +75,14 @@ function App() {
                       </div>
                   </section>
                   <section className="section gradient-blue">
-                      <Skills />
+                      <Skills/>
                   </section>
                   <section className="section black">
-                      <Projects />
+                      <Projects/>
+                  </section>
+                  <section className="section white">
+                      <img src={github} onClick={() => {window.open('https://github.com/kimyougmin')}}/>
+                      <p>(C) 2024. YoungMin Kim All rights reserved</p>
                   </section>
               </div>
               <div className="image-container">

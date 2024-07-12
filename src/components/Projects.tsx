@@ -199,11 +199,10 @@ function Projects() {
                 <div className={'project-body'}>
                     <img style={{margin: '0 7% 0 3%'}} src={portfolio}/>
                     <div>
-                        <p className={'body-content'}>대학교 2학년 과제로 만든 웹입니다. 어린이 보호구역을 마커로 찍는 프로젝트입니다.  어린이 보호 구역의 위도, 경도를 제공 해주는 Api를 이용하여 제작하였습니다.
+                        <p className={'body-content'}>포트폴리오 용도로 제작하게 되었습니다. 지금 보신 웹 사이트입니다.
                             <br/><br/>
-                            구글 맵과 php 통신 같은 부분은 제가 제작하였고 팀원들은 디자인과 음성 출력 부분을 만들었습니다.
-                            <br/><br/>
-                            대한민국에는 어린이 보호 구역이 너무 많아 모두 출력하면 성능이 너무 떨어졌습니다. 따라서 해당 프로젝트는 구글 map Api에 화면 좌측 상단 값과 우측 하단 값을 가져와 그 사이의 위치에 해당하는 어린이 보호 구역만 출력하도록 만들었습니다. </p>
+                            특수한 기능보다는 지금까지 진행한 프로젝트를 소개하는 웹 사이트 입니다.
+                            <br/><br/></p>
                         <p  onClick={() => {window.open('https://github.com/kimyougmin/portfolio/blob/main/README.md')}} className={'body-readme'}>자세히 보기 {'->'} README</p>
                     </div>
                 </div>

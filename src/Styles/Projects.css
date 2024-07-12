@@ -46,9 +46,10 @@
     align-content: center;
 }
 .project-footer{
-    padding: 2vh 5vh 0 2vh;
+    padding: 2vh 0vh 0 5vh;
 }
 .footer-line {
+    margin-right: 5vh;
     display: flex;
     align-items: center;
 }
