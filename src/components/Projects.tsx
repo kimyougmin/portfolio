@@ -201,7 +201,7 @@ function Projects() {
                     <div>
                         <p className={'body-content'}>포트폴리오 용도로 제작하게 되었습니다. 지금 보신 웹 사이트입니다.
                             <br/><br/>
-                            특수한 기능보다는 지금까지 진행한 프로젝트를 소개하는 웹 사이트 입니다.
+                            특수한 기능보다는 지금까지 진행한 프로젝트를 소개하는 웹 사이트 입니다. 개발하는 과정에서 UI에 스크롤 이벤트를 적용해보면서 동적인 웹에 더욱 흥미를 갖게 되었습니다.
                             <br/><br/></p>
                         <p  onClick={() => {window.open('https://github.com/kimyougmin/portfolio/blob/main/README.md')}} className={'body-readme'}>자세히 보기 {'->'} README</p>
                     </div>

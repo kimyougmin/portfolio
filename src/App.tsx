@@ -13,7 +13,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 
 function App() {
-    
+
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
@@ -24,7 +24,6 @@ function App() {
                     end: "+=150%",
                     pin: true,
                     scrub: true,
-                    markers: true
                 }
             })
                 .to(".zoomImg", {
