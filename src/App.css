@@ -30,8 +30,11 @@
   position: sticky;
   top: 0;
   left: 0;
-  opacity: 0.98;
+  opacity: 0.8;
   width: 100%;
+  z-index: 9999;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   height: 52px;
   display: flex;
   justify-content: space-between;
@@ -50,7 +53,19 @@
 }
 .navi_right > p {
   margin-left: 38px;
+  font-weight: lighter;
   font-size: 15px;
+}
+.navi_filter {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  height: 52px;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  filter: saturate(180%) blur(20px);
 }
 .content .section.hero {
   background-image: url(https://images.unsplash.com/photo-1589848315097-ba7b903cc1cc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -81,15 +96,73 @@
   width: 100vw;
   padding: 0 5vw 0 5vw;
 }
-.my_profile {
-  margin-top: 116px;
-}
 .my_profile > div:nth-child(1) {
+  margin-top: 116px !important;
+}
+.title {
+  margin-top: 248px;
   width: 100%;
   border-bottom: 1px solid #ffffff;
 }
-.my_profile > div:nth-child(1) > p {
+.title > p {
   font-size: 40px;
   font-weight: bold;
   color: #f5f5ff;
+  margin-bottom: 10px;
+}
+.profile_data {
+  padding: 10vh 5vw 0 5vw;
+  width: 90vw;
+  display: flex;
+}
+.profile_data > div:nth-child(2) > p {
+  color: #f5f5ff;
+}
+.profile_left > img {
+  width: 210px;
+  height: 269px;
+  border-radius: 39px;
+}
+.profile_right{
+  margin:70px 0 0 70px ;
+  position: relative;
+  bottom: 0;
+}
+.profile_right > p:nth-child(1) {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.profile_right > p:nth-child(2) {
+  font-weight: bold;
+  font-size: 25px;
+}
+.profile_right > div {
+  display: flex;
+  padding: 17px 0 14px 0;
+}
+.profile_right > div > p {
+  background-color: #FEFCEE;
+  color: #171F1B;
+  height: 32px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+}
+.profile_right > div > p:nth-child(1) {
+  width: 172px;
+}
+.profile_right > div > p:nth-child(2) {
+  width: 114px;
+  margin-left: 10px;
+}
+.profile_right > div > p:nth-child(2) {
+  width: 114px;
+  margin-left: 10px;
+}
+.profile_right > p {
+  font-weight: bold;
+  font-size: 20px;
 }

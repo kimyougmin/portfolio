@@ -2,18 +2,9 @@ import React, {useEffect, useRef} from 'react';
 import './App.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
-import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
-import PhoneAndroidRoundedIcon from '@mui/icons-material/PhoneAndroidRounded';
-import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
-import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
-import github from '../src/Imgs/langIcon/icon-github.png';
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+import myImage from "./portImage/kim34.jpg";
 
 function App() {
-    let black2 = document.querySelector(".back_black") as Element;
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
@@ -68,16 +59,19 @@ function App() {
                         <p>contact</p>
                     </div>
                 </div>
+                <div className="navi_filter">
+
+                </div>
                 <div className="black_body">
                     <div className="my_profile">
-                        <div>
+                        <div className="title">
                             <p>My Profile</p>
                         </div>
-                        <div>
-                            <div>
-
+                        <div className="profile_data">
+                            <div className="profile_left">
+                                <img src={myImage}/>
                             </div>
-                            <div>
+                            <div className="profile_right">
                                 <p>김영민</p>
                                 <p>2000.11.27</p>
                                 <div>
@@ -85,11 +79,17 @@ function App() {
                                     <p>정보처리기사</p>
                                 </div>
                                 <p>안녕하세요. 학습을 즐기는 개발자 김영민입니다.</p>
+                                <p>2019년 부산컴퓨터과학고등하교를  졸업하고 동서대학교 소프트웨어 학과를 졸업예정입니다.</p>
                             </div>
                         </div>
                     </div>
                     <div className="my_skills">
+                        <div className="title">
+                            <p>My Skills</p>
+                        </div>
+                        <div>
 
+                        </div>
                     </div>
                     <div className="my_projects">
 
