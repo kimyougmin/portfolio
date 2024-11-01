@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './App.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -13,86 +13,94 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 
 function App() {
-
+    let black2 = document.querySelector(".back_black") as Element;
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".wrapper",
-                    start: "top top",
-                    end: "+=150%",
-                    pin: true,
-                    scrub: true,
-                }
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".wrapper",
+                start: "top top",
+                end: "+=150%",
+                pin: true,
+                scrub: true,
+            }
+        })
+            .to(".zoomImg", {
+                scale: 2,
+                z: 350,
+                transformOrigin: "center center",
+                ease: "power1.inOut"
             })
-                .to(".zoomImg", {
-                    scale: 2,
-                    z: 350,
+            .to(
+                ".section.hero",
+                {
+                    scale: 1.1,
                     transformOrigin: "center center",
                     ease: "power1.inOut"
-                })
-                .to(
-                    ".section.hero",
-                    {
-                        scale: 1.1,
-                        transformOrigin: "center center",
-                        ease: "power1.inOut"
-                    },
-                    "<"
-                );
+                },
+                "<"
+            );
     }, []);
-
-  return (
-      <div>
-          <div className="wrapper">
-              <div className="content">
-                  <section className="section hero"></section>
-                  <section className="section gradient-purple">
-                      <div className={'aboutMe title'}>
-                          <p>About me</p>
-                      </div>
-                      <div className={'aboutMe content'}>
-                          <p className={'aboutMe-content title'}>학습을 즐기는 개발자</p>
-                          <p>새로운 것은 배우고 배운 것을 더욱 깊게 이해하고 이해한 것으로 새로운 것은 만든다. 새로운 것은 곧 미래다.</p>
-                          <div className={'aboutMe line'}>
-                              <HomeRoundedIcon sx={{fontSize: 39}}/>
-                              <p>부산 해운대</p>
-                              <AccountBoxRoundedIcon sx={{fontSize: 39}}/>
-                              <p>김영민</p>
-                              <CalendarMonthRoundedIcon sx={{fontSize: 39}}/>
-                              <p>00.11.27</p>
-                          </div>
-                          <div className={'aboutMe line'}>
-                              <PhoneAndroidRoundedIcon sx={{fontSize: 39}}/>
-                              <p>010-5260-1131</p>
-                              <EmailRoundedIcon sx={{fontSize: 39}}/>
-                              <p>dudals896@gmail.com</p>
-                              <SchoolRoundedIcon sx={{fontSize: 39}}/>
-                              <p>동서대학교(소프트웨어학과)</p>
-                          </div>
-                      </div>
-                  </section>
-                  <section className="section gradient-blue">
-                      <Skills/>
-                  </section>
-                  <section className="section black">
-                      <Projects/>
-                  </section>
-                  <section className="section white">
-                      <img src={github} onClick={() => {window.open('https://github.com/kimyougmin')}}/>
-                      <p>(C) 2024. YoungMin Kim All rights reserved</p>
-                  </section>
-              </div>
-              <div className="image-container">
-                  <img
+    return (
+        <div>
+            <div className="wrapper">
+                <div className="image-container">
+                    <img
                       className={'zoomImg'}
                       src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp"
                       alt="image"/>
               </div>
-          </div>
-      </div>
-  )
+              <div className="content">
+                  <section className="section hero"></section>
+              </div>
+            </div>
+            <section className="back_black">
+                <div className="navi">
+                    <div className="navi_left">
+                        <p>Y.M Kim Portfolio</p>
+                    </div>
+                    <div className="navi_right">
+                        <p>profile</p>
+                        <p>skills</p>
+                        <p>projects</p>
+                        <p>contact</p>
+                    </div>
+                </div>
+                <div className="black_body">
+                    <div className="my_profile">
+                        <div>
+                            <p>My Profile</p>
+                        </div>
+                        <div>
+                            <div>
+
+                            </div>
+                            <div>
+                                <p>김영민</p>
+                                <p>2000.11.27</p>
+                                <div>
+                                    <p>Frontend-Developer</p>
+                                    <p>정보처리기사</p>
+                                </div>
+                                <p>안녕하세요. 학습을 즐기는 개발자 김영민입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="my_skills">
+
+                    </div>
+                    <div className="my_projects">
+
+                    </div>
+                </div>
+            </section>
+            <section className="contact">
+                <p>(C) 2024. YoungMin Kim All rights reserved</p>
+            </section>
+        </div>
+    )
 }
 
 export default App;
