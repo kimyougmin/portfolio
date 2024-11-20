@@ -1,30 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cf3bd4e5.css",
-    "main.js": "/portfolio/static/js/main.c671900c.js",
+    "main.css": "/portfolio/static/css/main.fb205666.css",
+    "main.js": "/portfolio/static/js/main.aeb10a92.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
-    "static/media/portfolio.png": "/portfolio/static/media/portfolio.4f4037f5650a61f7e12b.png",
-    "static/media/skills-background.png": "/portfolio/static/media/skills-background.66bb6d6ae5ce775cab74.png",
-    "static/media/langProject.png": "/portfolio/static/media/langProject.545934ef407eff63ff52.png",
-    "static/media/about-me-background.png": "/portfolio/static/media/about-me-background.3ce725fd4f42b39a299b.png",
-    "static/media/pac.png": "/portfolio/static/media/pac.8428dd9de31776bdac65.png",
-    "static/media/passo1.png": "/portfolio/static/media/passo1.fb2531de162ad5a8fa21.png",
-    "static/media/coinai.png": "/portfolio/static/media/coinai.7714cf6f60600448b5ca.png",
-    "static/media/icon-nginx.png": "/portfolio/static/media/icon-nginx.9bca21aeb9537cf86fd4.png",
-    "static/media/icon-ubuntu.png": "/portfolio/static/media/icon-ubuntu.a74542561501903a28b8.png",
-    "static/media/textclassifier.png": "/portfolio/static/media/textclassifier.a46fbfb7285bfa79365e.png",
-    "static/media/realtimechat.png": "/portfolio/static/media/realtimechat.5c3b5c6b747db8675f37.png",
-    "static/media/icon-pytouch.png": "/portfolio/static/media/icon-pytouch.dc005d435d173cb2b05a.png",
-    "static/media/icon-tensorflow.png": "/portfolio/static/media/icon-tensorflow.d2145cc75dc411e52a95.png",
-    "static/media/icon-spring.png": "/portfolio/static/media/icon-spring.f0126d1c39d7ab5945e1.png",
-    "static/media/icon-php.png": "/portfolio/static/media/icon-php.d6e32fa469b805858684.png",
+    "static/media/pac.png": "/portfolio/static/media/pac.2773c5c589186dce7b60.png",
+    "static/media/coyp.png": "/portfolio/static/media/coyp.c30a0bbbb59ec3b7a522.png",
+    "static/media/skills.png": "/portfolio/static/media/skills.7f68fed0462a5d011a29.png",
+    "static/media/text.png": "/portfolio/static/media/text.0d5d852584102ac31721.png",
+    "static/media/coin.png": "/portfolio/static/media/coin.823fe3f3c76ab84ffacf.png",
+    "static/media/myimg.png": "/portfolio/static/media/myimg.527a859a47b62a2a3340.png",
+    "static/media/real.png": "/portfolio/static/media/real.e1a8c1bd838258ebb15a.png",
+    "static/media/kim34.jpg": "/portfolio/static/media/kim34.7d656e89bbb0c81f6c45.jpg",
     "index.html": "/portfolio/index.html",
-    "main.cf3bd4e5.css.map": "/portfolio/static/css/main.cf3bd4e5.css.map",
-    "main.c671900c.js.map": "/portfolio/static/js/main.c671900c.js.map",
+    "main.fb205666.css.map": "/portfolio/static/css/main.fb205666.css.map",
+    "main.aeb10a92.js.map": "/portfolio/static/js/main.aeb10a92.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf3bd4e5.css",
-    "static/js/main.c671900c.js"
+    "static/css/main.fb205666.css",
+    "static/js/main.aeb10a92.js"
   ]
 }
