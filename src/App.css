@@ -23,7 +23,7 @@
 .back_black {
   background-color: #000000;
   width: 100%;
-  height: 930vh;
+  padding-bottom: 40vh;
 }
 .navi {
   position: sticky;
@@ -205,7 +205,7 @@
 }
 .project_img > img {
   margin: 25vh auto 0 auto;
-  width: 996px;
+  width: 75%;
 }
 .githubGo {
   position: sticky;
@@ -315,22 +315,6 @@
 }
 .contact > p:nth-child(3) {
     margin-bottom: 20px;
-}
-@media screen and (max-width: 1800px) {
-    .back_black {
-        height: 933vh;
-    }
-    .black_body {
-
-    }
-}
-@media screen and (max-width: 1440px) {
-    .back_black {
-        height: 933vh;
-    }
-    .black_body {
-        height: 900vh;
-    }
 }
 @-webkit-keyframes tracking-in-expand-fwd-bottom {
   0% {

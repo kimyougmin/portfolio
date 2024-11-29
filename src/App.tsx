@@ -301,7 +301,7 @@ function App() {
                         출력</WhiteBold>하도록 만들었습니다.</p>
                     </div> : null}
                   <div className="project_img">
-                    <img src={pac} style={{width: "1138px"}}/>
+                    <img src={pac} style={{width: "80%"}}/>
                   </div>
                   <div className="githubGo" onClick={() => {window.open('https://github.com/kimyougmin/P.A.C')}}>
                     <p>P.A.C github 보러 가기</p>
@@ -325,7 +325,7 @@ function App() {
                       <p>코드 등은 KoBERT에서 제공하는 학습 코드를 개량하여 만들었습니다.</p>
                     </div> : null}
                   <div className="project_img">
-                    <img src={tca} style={{width: "1138px"}}/>
+                    <img src={tca} style={{width: "80%"}}/>
                   </div>
                   <div className="githubGo" onClick={() => {window.open('https://github.com/kimyougmin/TextClassifierApi')}}>
                     <p>T.C.A github 보러 가기</p>
