@@ -7,7 +7,6 @@ import mySkills from "./portImage/skills.png"
 import Coin from "./portImage/coin.png";
 import Real from "./portImage/real.png";
 import Passo from "./portImage/coyp.png";
-import pac from "./portImage/pac.png";
 import tca from "./portImage/text.png";
 import myContact from "./portImage/myimg.png"
 import styled from "styled-components";
@@ -15,6 +14,24 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import MailIcon from '@mui/icons-material/Mail';
 import iGithub from "./Imgs/langIcon/icon-github.png";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import gamtoo1 from "./Imgs/projectImg/gamtoo1.png"
+import gamtoo2 from "./Imgs/projectImg/gamtoo2.png"
+import gamtoo3 from "./Imgs/projectImg/gamtoo3.png"
+import gamtoo4 from "./Imgs/projectImg/gamtoo4.png"
+import rideon1 from "./Imgs/projectImg/rideon1.png"
+import rideon2 from "./Imgs/projectImg/rideon2.png"
+import rideon3 from "./Imgs/projectImg/rideon3.png"
+import rideon4 from "./Imgs/projectImg/rideon4.png"
+import rideon5 from "./Imgs/projectImg/rideon5.png"
+
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const SelectedPage = styled.p`
     margin-left: 38px;
@@ -212,6 +229,45 @@ function App() {
               <div className="title">
                 <p>My Projects</p>
               </div>
+              <div className="rideon">
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={30}
+                  loop={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide><img className="swiper_image" src={rideon1}/></SwiperSlide>
+                  <SwiperSlide><img src={rideon2}/></SwiperSlide>
+                  <SwiperSlide><img src={rideon3}/></SwiperSlide>
+                  <SwiperSlide><img src={rideon4}/></SwiperSlide>
+                  <SwiperSlide><img src={rideon5}/></SwiperSlide>
+                </Swiper>
+
+              </div>
+              <div className="rideon">
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={30}
+                  loop={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide><img src={gamtoo1}/></SwiperSlide>
+                  <SwiperSlide><img src={gamtoo2}/></SwiperSlide>
+                  <SwiperSlide><img src={gamtoo3}/></SwiperSlide>
+                  <SwiperSlide><img src={gamtoo4}/></SwiperSlide>
+                </Swiper>
+
+              </div>
               <div className="projects">
                 <div className="project coinAi">
                   <div className="coinAi_title" ref={CoinAiTitleRef}>
@@ -231,7 +287,9 @@ function App() {
                   <div className="project_img">
                     <img src={Coin}/>
                   </div>
-                  <div className="githubGo" onClick={() => {window.open('https://github.com/kimyougmin/CoinAi')}}>
+                  <div className="githubGo" onClick={() => {
+                    window.open('https://github.com/kimyougmin/CoinAi')
+                  }}>
                     <p>CoinAi github 보러 가기</p>
                     <div className="blueBtn">
                       <ArrowForwardIcon className="arrowIcon"/>
@@ -254,7 +312,9 @@ function App() {
                   <div className="project_img">
                     <img src={Real}/>
                   </div>
-                  <div className="realGithubGo" onClick={() => {window.open('https://github.com/kimyougmin/RealTimeChat')}}>
+                  <div className="realGithubGo" onClick={() => {
+                    window.open('https://github.com/kimyougmin/RealTimeChat')
+                  }}>
                     <p>RealTime Chat github 보러 가기</p>
                     <div className="blueBtn">
                       <ArrowForwardIcon className="arrowIcon"/>
@@ -279,37 +339,16 @@ function App() {
                   <div className="project_img">
                     <img src={Passo}/>
                   </div>
-                  <div className="passoGithubGo" onClick={() => {window.open('https://github.com/kimyougmin/CopyPasso')}}>
+                  <div className="passoGithubGo" onClick={() => {
+                    window.open('https://github.com/kimyougmin/CopyPasso')
+                  }}>
                     <p>Copy Passo github 보러 가기</p>
                     <div className="blueBtn">
                       <ArrowForwardIcon className="arrowIcon"/>
                     </div>
                   </div>
                 </div>
-                <div className="project coinAi">
-                  <div className="coinAi_title" ref={pacTitleRef}>
-                    <p>P.A.C</p>
-                    <p></p>
-                  </div>
-                  {pacTitleState ?
-                    <div className="project_notice">
-                      <p>대학교 2학년 과제로 만든 웹입니다. <WhiteBold>어린이 보호구역을 마커로 찍는 프로젝트</WhiteBold>입니다.</p>
-                      <p><WhiteBold>어린이 보호 구역의 위도, 경도를 제공 해주는 Api를 이용하여 제작</WhiteBold>하였습니다.</p>
-                      <p>구글 맵과 php 통신 같은 부분은 제가 제작하였고 팀원들은 디자인과 음성 출력 부분을 만들었습니다.</p>
-                      <p>대한민국에는 어린이 보호 구역이 너무 많아 모두 출력하면 성능이 너무 떨어졌습니다.</p>
-                      <p>따라서 해당 프로젝트는 <WhiteBold>구글 map Api에 화면 좌측 상단 값과 우측 하단 값을 가져와 그 사이의 위치에 해당하는 어린이 보호 구역만
-                        출력</WhiteBold>하도록 만들었습니다.</p>
-                    </div> : null}
-                  <div className="project_img">
-                    <img src={pac} style={{width: "80%"}}/>
-                  </div>
-                  <div className="githubGo" onClick={() => {window.open('https://github.com/kimyougmin/P.A.C')}}>
-                    <p>P.A.C github 보러 가기</p>
-                    <div className="blueBtn">
-                      <ArrowForwardIcon className="arrowIcon"/>
-                    </div>
-                  </div>
-                </div>
+
                 <div className="project coinAi">
                   <div className="coinAi_title" ref={tcaTitleRef}>
                     <p>T.C.A</p>
@@ -319,15 +358,19 @@ function App() {
                     <div className="project_notice">
                       <p>4학년 졸업 작품으로 구현한 프로젝트입니다.</p>
                       <p>처음으로 <WhiteBold>AI를 사용한 프로젝트</WhiteBold>입니다.</p>
-                      <p><WhiteBold>구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning</WhiteBold> 후 텍스트를 분류하는 모델로 만들었습니다.</p>
-                      <p><WhiteBold>fast Api 라이브러리</WhiteBold>를 이용하여 텍스트를 입력 받으면 모델에서 클린, 욕설, 세대갈등, 비하, 희화화 중 하나로 분류합니다. 분류된 값을 수신측에 반환하도록 만들었습니다.</p>
+                      <p><WhiteBold>구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning</WhiteBold> 후 텍스트를 분류하는 모델로 만들었습니다.
+                      </p>
+                      <p><WhiteBold>fast Api 라이브러리</WhiteBold>를 이용하여 텍스트를 입력 받으면 모델에서 클린, 욕설, 세대갈등, 비하, 희화화 중 하나로 분류합니다.
+                        분류된 값을 수신측에 반환하도록 만들었습니다.</p>
                       <p>처음으로 AI를 써봐서 공부를 변행하면서 제작하였습니다.</p>
                       <p>코드 등은 KoBERT에서 제공하는 학습 코드를 개량하여 만들었습니다.</p>
                     </div> : null}
                   <div className="project_img">
                     <img src={tca} style={{width: "80%"}}/>
                   </div>
-                  <div className="githubGo" onClick={() => {window.open('https://github.com/kimyougmin/TextClassifierApi')}}>
+                  <div className="githubGo" onClick={() => {
+                    window.open('https://github.com/kimyougmin/TextClassifierApi')
+                  }}>
                     <p>T.C.A github 보러 가기</p>
                     <div className="blueBtn">
                       <ArrowForwardIcon className="arrowIcon"/>
@@ -347,11 +390,11 @@ function App() {
             <div className={"contact_body_r"}>
               <p className="contact_subTitle">세련된 디자인과 기술 끊임 없이 연구하는 개발자</p>
               <div className="contact_body_flex">
-                <PhoneAndroidIcon />
+                <PhoneAndroidIcon/>
                 <p>010-5260-1131</p>
               </div>
               <div className="contact_body_flex">
-                <MailIcon />
+                <MailIcon/>
                 <p>dudals896@gmail.com</p>
               </div>
               <div>
