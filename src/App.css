@@ -163,6 +163,19 @@
     align-items: center;
     justify-items: center;
 }
+.swiper-slide > img {
+    margin-top: 50px;
+}
+@media (max-width: 1060px) {
+    .swiper-slide > img {
+        margin-top: 36px;
+    }
+}
+@media (max-width: 960px) {
+    .swiper-slide > img {
+        margin-top: 18px;
+    }
+}
 .swiper_image{
     width: 90%;
 }
@@ -172,7 +185,7 @@
   border-radius: 39px;
 }
 .profile_right{
-  margin:70px 0 0 70px ;
+  margin:48px 0 0 70px ;
   position: relative;
   bottom: 0;
 }
