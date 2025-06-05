@@ -230,63 +230,28 @@ function App() {
               <div className="title">
                 <p>My Projects</p>
               </div>
-              <div className="rideon">
-                <Swiper
-                  slidesPerView={1}
-                  spaceBetween={30}
-                  loop={true}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={true}
-                  modules={[Pagination, Navigation]}
-                  className="mySwiper"
-                >
-                  <SwiperSlide><img className="swiper_image" src={rideon1}/></SwiperSlide>
-                  <SwiperSlide><img src={rideon2}/></SwiperSlide>
-                  <SwiperSlide><img src={rideon3}/></SwiperSlide>
-                  <SwiperSlide><img src={rideon4}/></SwiperSlide>
-                  <SwiperSlide><img src={rideon5}/></SwiperSlide>
-                </Swiper>
-
-              </div>
-              <div className="rideon">
-                <Swiper
-                  slidesPerView={1}
-                  spaceBetween={30}
-                  loop={true}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={true}
-                  modules={[Pagination, Navigation]}
-                  className="mySwiper"
-                >
-                  <SwiperSlide><img src={gamtoo1}/></SwiperSlide>
-                  <SwiperSlide><img src={gamtoo2}/></SwiperSlide>
-                  <SwiperSlide><img src={gamtoo3}/></SwiperSlide>
-                  <SwiperSlide><img src={gamtoo4}/></SwiperSlide>
-                </Swiper>
-
-              </div>
               <div className="projects">
                 <div className="project coinAi">
-                  <div className="coinAi_title" ref={CoinAiTitleRef}>
-                    <p>CoinAI</p>
-                    <p>(2인 진행 중)</p>
-                  </div>
-                  {coinAiTitleState ?
-                    <div className="project_notice">
-                      <p>CoinAi는 <WhiteBold>차트의 히스토리를 분석하여 24시간 후 코인의 가격을 예측</WhiteBold>하는 사이트입니다.</p>
-                      <p>시중에 비슷한 서비스가 많지만 모두 유료입니다.</p>
-                      <p>따라서 AI를 전공하고 있는 친구와 함께 만들고 있습니다.</p>
-                      <p>차트를 구현하기 위해 <WhiteBold>Apexcharts</WhiteBold>를 사용하였습니다. </p>
-                      <p><WhiteBold>BitCoin Api</WhiteBold>를 이용하여코인의 히스토리를 가져와 차트에서 출력하고 <WhiteBold>코인
-                        목록을 선택할<br/> 때마다 차트와 해당 코인의 세부 정보가 바뀌도록 구현했습니다.</WhiteBold></p>
-                      <p>프론트는 기능적인 부분을 완성했고 AI를 기반으로한 Api 업데이트를 준비중 입니다. </p>
-                    </div> : null}
-                  <div className="project_img">
-                    <img src={Coin}/>
+                  <div style={{'display':'flex', 'marginBottom':'32px'}}>
+                    <div>
+                      <div className="coinAi_title" ref={CoinAiTitleRef}>
+                        <p>CoinAI</p>
+                        <p>(2인 진행 중)</p>
+                      </div>
+                      {coinAiTitleState ?
+                        <div className="project_notice">
+                          <p>CoinAi는 <WhiteBold>차트의 히스토리를 분석하여 24시간 후 코인의 가격을 예측</WhiteBold>하는 사이트입니다.</p>
+                          <p>시중에 비슷한 서비스가 많지만 모두 유료입니다.</p>
+                          <p>따라서 AI를 전공하고 있는 친구와 함께 만들고 있습니다.</p>
+                          <p>차트를 구현하기 위해 <WhiteBold>Apexcharts</WhiteBold>를 사용하였습니다. </p>
+                          <p><WhiteBold>BitCoin Api</WhiteBold>를 이용하여코인의 히스토리를 가져와 차트에서 출력하고 <WhiteBold>코인
+                            목록을 선택할<br/> 때마다 차트와 해당 코인의 세부 정보가 바뀌도록 구현했습니다.</WhiteBold></p>
+                          <p>프론트는 기능적인 부분을 완성했고 AI를 기반으로한 Api 업데이트를 준비중 입니다. </p>
+                        </div> : null}
+                    </div>
+                    <div className="project_img">
+                      <img src={Coin}/>
+                    </div>
                   </div>
                   <div className="githubGo" onClick={() => {
                     window.open('https://github.com/kimyougmin/CoinAi')
@@ -298,52 +263,30 @@ function App() {
                   </div>
                 </div>
                 <div className="project coinAi">
-                  <div className="coinAi_title" ref={realTimeTitleRef}>
-                    <p>RealTime Chat</p>
-                  </div>
-                  {realTimeTitleState ?
-                    <div className="project_notice">
-                      <p>해당 프로젝트는 실시간 채팅 기능을 구현 해봤습니다.</p>
-                      <p>DB에서 데이터를 조회하는 구조가 아닌 <WhiteBold>데이터가 생성되는 즉시 상대방에게 전송</WhiteBold>하는 실시간 구조를 공부하기 위해 시작한
-                        프로젝트입니다.</p>
-                      <p>특별한 라이브러리 사용은 하지 않았고 각각 클라이언트 별로 node.js를 이용하여 메시지를 전송하도록 구현했습니다.</p>
-                      <p>채팅을 보내면 <WhiteBold>브로드캐스트 통신</WhiteBold>으로 모든 사용자에게 보내고 사용자 아이디에 uuid를 PK로 이용하여 해당 유저에게만 송신 되도록
-                        구현했습니다.</p>
-                    </div> : null}
-                  <div className="project_img">
-                    <img src={Real}/>
+                  <div style={{'display':'flex', 'marginBottom':'32px'}}>
+                    <div>
+                      <div className="coinAi_title" ref={realTimeTitleRef}>
+                        <p>RealTimeChat</p>
+                      </div>
+                      {realTimeTitleState ?
+                        <div className="project_notice">
+                          <p>해당 프로젝트는 실시간 채팅 기능을 구현 해봤습니다.</p>
+                          <p>DB에서 데이터를 조회하는 구조가 아닌 <WhiteBold>데이터가 생성되는 즉시 상대방에게 전송</WhiteBold>하는 실시간 구조를 공부하기 위해 시작한
+                            프로젝트입니다.</p>
+                          <p>특별한 라이브러리 사용은 하지 않았고 각각 클라이언트 별로 node.js를 이용하여 메시지를 전송하도록 구현했습니다.</p>
+                          <p>채팅을 보내면 <WhiteBold>브로드캐스트 통신</WhiteBold>으로 모든 사용자에게 보내고 사용자 아이디에 uuid를 PK로 이용하여 해당 유저에게만 송신
+                            되도록
+                            구현했습니다.</p>
+                        </div> : null}
+                    </div>
+                    <div className="project_img">
+                      <img src={Real}/>
+                    </div>
                   </div>
                   <div className="realGithubGo" onClick={() => {
                     window.open('https://github.com/kimyougmin/RealTimeChat')
                   }}>
-                    <p>RealTime Chat github 보러 가기</p>
-                    <div className="blueBtn">
-                      <ArrowForwardIcon className="arrowIcon"/>
-                    </div>
-                  </div>
-                </div>
-                <div className="project coinAi">
-                  <div className="coinAi_title" ref={passoTitleRef}>
-                    <p>Copy Passo</p>
-                    <p>(2인)</p>
-                  </div>
-                  {passoTitleState ?
-                    <div className="project_notice">
-                      <p>CoinAi는 <WhiteBold>차트의 히스토리를 분석하여 24시간 후 코인의 가격을 예측</WhiteBold>하는 사이트입니다.</p>
-                      <p>시중에 비슷한 서비스가 많지만 모두 유료입니다.</p>
-                      <p>따라서 AI를 전공하고 있는 친구와 함께 만들고 있습니다.</p>
-                      <p>차트를 구현하기 위해 <WhiteBold>Apexcharts</WhiteBold>를 사용하였습니다. </p>
-                      <p><WhiteBold>BitCoin Api</WhiteBold>를 이용하여코인의 히스토리를 가져와 차트에서 출력하고 <WhiteBold>코인
-                        목록을 선택할<br/> 때마다 차트와 해당 코인의 세부 정보가 바뀌도록 구현했습니다.</WhiteBold></p>
-                      <p>프론트는 기능적인 부분을 완성했고 AI를 기반으로한 Api 업데이트를 준비중 입니다. </p>
-                    </div> : null}
-                  <div className="project_img">
-                    <img src={Passo}/>
-                  </div>
-                  <div className="passoGithubGo" onClick={() => {
-                    window.open('https://github.com/kimyougmin/CopyPasso')
-                  }}>
-                    <p>Copy Passo github 보러 가기</p>
+                    <p>RealTimeChat github 보러 가기</p>
                     <div className="blueBtn">
                       <ArrowForwardIcon className="arrowIcon"/>
                     </div>
@@ -351,23 +294,28 @@ function App() {
                 </div>
 
                 <div className="project coinAi">
-                  <div className="coinAi_title" ref={tcaTitleRef}>
-                    <p>T.C.A</p>
-                    <p></p>
-                  </div>
-                  {tcaTitleState ?
-                    <div className="project_notice">
-                      <p>4학년 졸업 작품으로 구현한 프로젝트입니다.</p>
-                      <p>처음으로 <WhiteBold>AI를 사용한 프로젝트</WhiteBold>입니다.</p>
-                      <p><WhiteBold>구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning</WhiteBold> 후 텍스트를 분류하는 모델로 만들었습니다.
-                      </p>
-                      <p><WhiteBold>fast Api 라이브러리</WhiteBold>를 이용하여 텍스트를 입력 받으면 모델에서 클린, 욕설, 세대갈등, 비하, 희화화 중 하나로 분류합니다.
-                        분류된 값을 수신측에 반환하도록 만들었습니다.</p>
-                      <p>처음으로 AI를 써봐서 공부를 변행하면서 제작하였습니다.</p>
-                      <p>코드 등은 KoBERT에서 제공하는 학습 코드를 개량하여 만들었습니다.</p>
-                    </div> : null}
-                  <div className="project_img">
-                    <img src={tca} style={{width: "80%"}}/>
+                  <div style={{'display':'flex', 'marginBottom':'32px'}}>
+                    <div>
+                      <div className="coinAi_title" ref={tcaTitleRef}>
+                        <p>T.C.A</p>
+                        <p></p>
+                      </div>
+                      {tcaTitleState ?
+                        <div className="project_notice">
+                          <p>4학년 졸업 작품으로 구현한 프로젝트입니다.</p>
+                          <p>처음으로 <WhiteBold>AI를 사용한 프로젝트</WhiteBold>입니다.</p>
+                          <p><WhiteBold>구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning</WhiteBold> 후 텍스트를 분류하는 모델로 만들었습니다.
+                          </p>
+                          <p><WhiteBold>fast Api 라이브러리</WhiteBold>를 이용하여 텍스트를 입력 받으면 모델에서 클린, 욕설, 세대갈등, 비하, 희화화 중 하나로
+                            분류합니다.
+                            분류된 값을 수신측에 반환하도록 만들었습니다.</p>
+                          <p>처음으로 AI를 써봐서 공부를 변행하면서 제작하였습니다.</p>
+                          <p>코드 등은 KoBERT에서 제공하는 학습 코드를 개량하여 만들었습니다.</p>
+                        </div> : null}
+                    </div>
+                    <div className="project_img">
+                      <img src={tca} style={{width: "80%"}}/>
+                    </div>
                   </div>
                   <div className="githubGo" onClick={() => {
                     window.open('https://github.com/kimyougmin/TextClassifierApi')
@@ -404,7 +352,7 @@ function App() {
               </div>
             </div>
           </div>
-          <p>COPYRIGHT 2024. Young Min Kim All rights reserved</p>
+          <p>COPYRIGHT 2024. YoungMin Kim All rights reserved</p>
         </section>
       </div>
     )

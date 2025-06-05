@@ -250,7 +250,7 @@
   color: #f5f5ff;
 }
 .coinAi_title > p:nth-child(2) {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #86868B;
   line-height: 58px;
@@ -263,7 +263,7 @@
 }
 .project_notice > p {
   color: #86868B;
-  font-size: 20px;
+  font-size: 18px;
 }
 .project_img {
   width: 100%;
@@ -271,7 +271,7 @@
 }
 .project_img > img {
   margin: 25vh auto 0 auto;
-  width: 75%;
+  width: 100%;
 }
 .githubGo {
   position: sticky;
