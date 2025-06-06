@@ -6,7 +6,16 @@ import myImage from "./portImage/kim34.jpg";
 import mySkills from "./portImage/skills.png"
 import Coin from "./portImage/coin.png";
 import Real from "./portImage/real.png";
-import Passo from "./portImage/coyp.png";
+import dopdang1 from "./portImage/dopdangImg1.png";
+import dopdang2 from "./portImage/dopdangImg2.png";
+import dopdang3 from "./portImage/dopdangImg3.png";
+import dopdang4 from "./portImage/dopdangImg4.png";
+import rideon1 from "./portImage/rideon1.png";
+import rideon2 from "./portImage/rideon2.png";
+import rideon3 from "./portImage/rideon3.png";
+import rideon4 from "./portImage/rideon4.png";
+
+
 import tca from "./portImage/text.png";
 import myContact from "./portImage/myimg.png"
 import styled from "styled-components";
@@ -17,19 +26,11 @@ import iGithub from "./Imgs/langIcon/icon-github.png";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import gamtoo1 from "./Imgs/projectImg/gamtoo1.png"
-import gamtoo2 from "./Imgs/projectImg/gamtoo2.png"
-import gamtoo3 from "./Imgs/projectImg/gamtoo3.png"
-import gamtoo4 from "./Imgs/projectImg/gamtoo4.png"
-import rideon1 from "./Imgs/projectImg/rideon1.png"
-import rideon2 from "./Imgs/projectImg/rideon2.png"
-import rideon3 from "./Imgs/projectImg/rideon3.png"
-import rideon4 from "./Imgs/projectImg/rideon4.png"
-import rideon5 from "./Imgs/projectImg/rideon5.png"
+import 'swiper/css/effect-cube';
 
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import {Pagination, Navigation, EffectCube} from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -51,11 +52,11 @@ interface ElementTop {
     contacts: number;
 }
 interface ProjectsTop {
-    coinAi: number;
-    realTime: number;
-    passo: number;
-    pac: number;
-    tca: number;
+  dopdang: number;
+  rideon: number;
+  coinAi: number;
+  realTime: number;
+  tca: number;
 }
 function App() {
   const [page, setPage] = useState(0);
@@ -64,14 +65,14 @@ function App() {
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
+  const rideOnTitleRef = useRef<HTMLDivElement>(null);
+  const [rideOnTitleState, setRideOnTitleState] = useState<boolean>(false);
+  const dopdangTitleRef = useRef<HTMLDivElement>(null);
+  const [dopdangTitleState, setDopdangTitleState] = useState<boolean>(false);
   const CoinAiTitleRef = useRef<HTMLDivElement>(null);
   const [coinAiTitleState, setCoinAiTitleState] = useState<boolean>(false);
   const realTimeTitleRef = useRef<HTMLDivElement>(null);
   const [realTimeTitleState, setRealTimeTitleState] = useState<boolean>(false);
-  const passoTitleRef = useRef<HTMLDivElement>(null);
-  const [passoTitleState, setPassoTitleState] = useState<boolean>(false);
-  const pacTitleRef = useRef<HTMLDivElement>(null);
-  const [pacTitleState, setPacTitleState] = useState<boolean>(false);
   const tcaTitleRef = useRef<HTMLDivElement>(null);
   const [tcaTitleState, setTcaTitleState] = useState<boolean>(false);
 
@@ -117,11 +118,21 @@ function App() {
         contacts: contactRef.current?.offsetTop as number - 1000,
       }
       const projectsTop: ProjectsTop = {
+        dopdang:dopdangTitleRef.current?.offsetTop as number -900,
+        rideon: rideOnTitleRef.current?.offsetTop as number -900,
         coinAi: CoinAiTitleRef.current?.offsetTop as number - 900,
         realTime: realTimeTitleRef.current?.offsetTop as number - 900,
-        passo: passoTitleRef.current?.offsetTop as number - 900,
-        pac: pacTitleRef.current?.offsetTop as number - 900,
         tca: tcaTitleRef.current?.offsetTop as number - 900
+      }
+      if(window.scrollY - 10 >= projectsTop.dopdang && projectsTop.dopdang <= window.scrollY + 10) {
+        setDopdangTitleState(true);
+      } else {
+        setDopdangTitleState(false);
+      }
+      if(window.scrollY - 10 >= projectsTop.rideon && projectsTop.rideon <= window.scrollY + 10) {
+        setRideOnTitleState(true);
+      } else {
+        setRideOnTitleState(false);
       }
       if(window.scrollY - 10 >= projectsTop.coinAi && projectsTop.coinAi <= window.scrollY + 10) {
         setCoinAiTitleState(true);
@@ -132,16 +143,6 @@ function App() {
         setRealTimeTitleState(true);
       } else {
         setRealTimeTitleState(false);
-      }
-      if(window.scrollY - 10 >= projectsTop.passo && projectsTop.passo <= window.scrollY + 10) {
-        setPassoTitleState(true);
-      } else {
-        setPassoTitleState(false);
-      }
-      if(window.scrollY - 10 >= projectsTop.pac && projectsTop.pac <= window.scrollY + 10) {
-        setPacTitleState(true);
-      } else {
-        setPacTitleState(false);
       }
       if(window.scrollY - 10 >= projectsTop.tca && projectsTop.tca <= window.scrollY + 10) {
         setTcaTitleState(true);
@@ -157,7 +158,6 @@ function App() {
       } else if(elementsTop.projects <= window.scrollY && elementsTop.contacts > window.scrollY) {
         setPage(2);
       }
-      // console.log(window.scrollY,testA)
     }
     const onProfileClick = () => {
         profileRef.current?.scrollIntoView({behavior: "smooth"});
@@ -232,7 +232,117 @@ function App() {
               </div>
               <div className="projects">
                 <div className="project coinAi">
-                  <div style={{'display':'flex', 'marginBottom':'32px'}}>
+                  <div style={{'display': 'flex', 'marginBottom': '32px', 'overflow': 'hidden'}}>
+                    <div style={{'flex': 1}}>
+                      <div className="coinAi_title" ref={dopdangTitleRef}>
+                        <p>DopDang(돕당)</p>
+                      </div>
+                      {dopdangTitleState ?
+                        <div className="project_notice">
+                          <p>돕당 (DOPDANG) 은 이사 , 청소 , 과외 , 수리 등 다양한 서비스를 원하는 사람과 전문가를 연결해주는 <WhiteBold>의뢰인• 전문가 매칭
+                            플랫폼</WhiteBold>입니다.</p>
+                          <p>사용자는 원하는 서비스를 검색하고 , 전문가와 직접 상담하여 맞춤형 서비스를 받을 수 있습니다.</p>
+                          <p>전문가는 의뢰인에게 오퍼를 보낸 후 채팅을 통해 의뢰를 진행하게 됩니다.</p>
+                          <p>Next.js를 이용한 SSR로 SEO를 최적화하고 <WhiteBold>미들웨어를 통해 관리자 페이지처럼 민감한 페이지의 노출을 차단</WhiteBold>할 수
+                            있습니다.</p>
+                        </div> : null}
+                    </div>
+                    <div className="project_img" style={{'flex': 1}}>
+                      <Swiper
+                        effect={'cube'}
+                        grabCursor={true}
+                        cubeEffect={{
+                          shadow: true,
+                          slideShadows: true,
+                          shadowOffset: 1,
+                          shadowScale: 0.3,
+                        }}
+                        pagination={true}
+                        modules={[EffectCube, Pagination]}
+                        className="mySwiper"
+                      >
+                        <SwiperSlide>
+                          <img src={dopdang1}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={dopdang2}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={dopdang3}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={dopdang4}/>
+                        </SwiperSlide>
+                      </Swiper>
+                    </div>
+                  </div>
+                  <div className="githubGo" onClick={() => {
+                    window.open('https://github.com/kimyougmin/dopdangFE')
+                  }}>
+                    <div>
+                      <p>dopdnag github 보러 가기</p>
+                      <div className="blueBtn">
+                        <ArrowForwardIcon className="arrowIcon"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="project coinAi">
+                  <div style={{'display': 'flex', 'marginBottom': '32px', 'overflow': 'hidden'}}>
+                    <div style={{'flex': 1}}>
+                      <div className="coinAi_title" ref={rideOnTitleRef}>
+                        <p>RideOn</p>
+                      </div>
+                      {rideOnTitleState ?
+                        <div className="project_notice">
+                          <p>RideOn 은 자전거 이용자들을 위한 <WhiteBold>OPEN API 기반 통합 플랫폼</WhiteBold>입니다.</p>
+                          <p>전국 자전거 도로 , 공공자전거 대여소 , 수리시설 , 날씨 등의 데이터를 실시간으로 활용하여 사용자에게 편리한 정보를 제공합니다.</p>
+                          <p>또한 , 자전거 지도 , 편의시설 정보 , 쇼핑 , 뉴스 , 커뮤니티 등 다양한 기능을 제공하여 라이더들이 더욱 쉽고 즐겁게 자전거 문화를 경험할 수 있도록 합니다.</p>
+                          <p><WhiteBold>Vue.js를 이용하여 구현</WhiteBold>하였고 현재 외부 API를 적극적으로 활용하여 프로젝트를 구축했습니다. </p>
+                        </div> : null}
+                    </div>
+                    <div className="project_img" style={{'flex': 1}}>
+                      <Swiper
+                        effect={'cube'}
+                        grabCursor={true}
+                        cubeEffect={{
+                          shadow: true,
+                          slideShadows: true,
+                          shadowOffset: 1,
+                          shadowScale: 0.3,
+                        }}
+                        pagination={true}
+                        modules={[EffectCube, Pagination]}
+                        className="mySwiper"
+                      >
+                        <SwiperSlide>
+                          <img src={rideon1}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={rideon2}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={rideon3}/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src={rideon4}/>
+                        </SwiperSlide>
+                      </Swiper>
+                    </div>
+                  </div>
+                  <div className="githubGo" onClick={() => {
+                    window.open('https://github.com/kimyougmin/RideOn')
+                  }}>
+                    <div>
+                      <p>RideOn github 보러 가기</p>
+                      <div className="blueBtn">
+                        <ArrowForwardIcon className="arrowIcon"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="project coinAi">
+                  <div style={{'display': 'flex', 'marginBottom': '32px'}}>
                     <div>
                       <div className="coinAi_title" ref={CoinAiTitleRef}>
                         <p>CoinAI</p>
@@ -256,14 +366,16 @@ function App() {
                   <div className="githubGo" onClick={() => {
                     window.open('https://github.com/kimyougmin/CoinAi')
                   }}>
-                    <p>CoinAi github 보러 가기</p>
-                    <div className="blueBtn">
-                      <ArrowForwardIcon className="arrowIcon"/>
+                    <div>
+                      <p>CoinAi github 보러 가기</p>
+                      <div className="blueBtn">
+                        <ArrowForwardIcon className="arrowIcon"/>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="project coinAi">
-                  <div style={{'display':'flex', 'marginBottom':'32px'}}>
+                  <div style={{'display': 'flex', 'marginBottom': '32px'}}>
                     <div>
                       <div className="coinAi_title" ref={realTimeTitleRef}>
                         <p>RealTimeChat</p>
@@ -283,18 +395,20 @@ function App() {
                       <img src={Real}/>
                     </div>
                   </div>
-                  <div className="realGithubGo" onClick={() => {
+                  <div className="githubGo" onClick={() => {
                     window.open('https://github.com/kimyougmin/RealTimeChat')
                   }}>
-                    <p>RealTimeChat github 보러 가기</p>
-                    <div className="blueBtn">
-                      <ArrowForwardIcon className="arrowIcon"/>
+                    <div>
+                      <p>RealTimeChat github 보러 가기</p>
+                      <div className="blueBtn">
+                        <ArrowForwardIcon className="arrowIcon"/>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="project coinAi">
-                  <div style={{'display':'flex', 'marginBottom':'32px'}}>
+                  <div style={{'display': 'flex', 'marginBottom': '32px'}}>
                     <div>
                       <div className="coinAi_title" ref={tcaTitleRef}>
                         <p>T.C.A</p>
@@ -304,7 +418,8 @@ function App() {
                         <div className="project_notice">
                           <p>4학년 졸업 작품으로 구현한 프로젝트입니다.</p>
                           <p>처음으로 <WhiteBold>AI를 사용한 프로젝트</WhiteBold>입니다.</p>
-                          <p><WhiteBold>구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning</WhiteBold> 후 텍스트를 분류하는 모델로 만들었습니다.
+                          <p><WhiteBold>구글 Bert를 한국어 버전으로 만든 KoBERT를 이용하여 fine tuning</WhiteBold> 후 텍스트를 분류하는 모델로
+                            만들었습니다.
                           </p>
                           <p><WhiteBold>fast Api 라이브러리</WhiteBold>를 이용하여 텍스트를 입력 받으면 모델에서 클린, 욕설, 세대갈등, 비하, 희화화 중 하나로
                             분류합니다.
@@ -314,15 +429,17 @@ function App() {
                         </div> : null}
                     </div>
                     <div className="project_img">
-                      <img src={tca} style={{width: "80%"}}/>
+                      <img src={tca}/>
                     </div>
                   </div>
                   <div className="githubGo" onClick={() => {
                     window.open('https://github.com/kimyougmin/TextClassifierApi')
                   }}>
-                    <p>T.C.A github 보러 가기</p>
-                    <div className="blueBtn">
-                      <ArrowForwardIcon className="arrowIcon"/>
+                    <div>
+                      <p>T.C.A github 보러 가기</p>
+                      <div className="blueBtn">
+                        <ArrowForwardIcon className="arrowIcon"/>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -347,7 +464,9 @@ function App() {
                 <p>dudals896@gmail.com</p>
               </div>
               <div>
-                <img src={iGithub} onClick={() => {window.open('https://github.com/kimyougmin')}}/>
+                <img src={iGithub} onClick={() => {
+                  window.open('https://github.com/kimyougmin')
+                }}/>
                 <p>My Github!</p>
               </div>
             </div>
