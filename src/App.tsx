@@ -2,22 +2,21 @@ import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import myImage from "./portImage/kim34.jpg";
-import mySkills from "./portImage/skills.png"
-import Coin from "./portImage/coin.png";
-import Real from "./portImage/real.png";
-import dopdang1 from "./portImage/dopdangImg1.png";
-import dopdang2 from "./portImage/dopdangImg2.png";
-import dopdang3 from "./portImage/dopdangImg3.png";
-import dopdang4 from "./portImage/dopdangImg4.png";
-import rideon1 from "./portImage/rideon1.png";
-import rideon2 from "./portImage/rideon2.png";
-import rideon3 from "./portImage/rideon3.png";
-import rideon4 from "./portImage/rideon4.png";
+import myImage from "./Imgs/portImage/kim34.jpg";
+import mySkills from "./Imgs/portImage/skills.png"
+import Coin from "./Imgs/portImage/coin.png";
+import Real from "./Imgs/portImage/real.png";
+import dopdang1 from "./Imgs/portImage/dopdangImg1.png";
+import dopdang2 from "./Imgs/portImage/dopdangImg2.png";
+import dopdang3 from "./Imgs/portImage/dopdangImg3.png";
+import dopdang4 from "./Imgs/portImage/dopdangImg4.png";
+import rideon1 from "./Imgs/portImage/rideon1.png";
+import rideon2 from "./Imgs/portImage/rideon2.png";
+import rideon3 from "./Imgs/portImage/rideon3.png";
+import rideon4 from "./Imgs/portImage/rideon4.png";
 
-
-import tca from "./portImage/text.png";
-import myContact from "./portImage/myimg.png"
+import tca from "./Imgs/portImage/text.png";
+import myContact from "./Imgs/portImage/myimg.png"
 import styled from "styled-components";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
@@ -245,6 +244,34 @@ function App() {
                           <p>전문가는 의뢰인에게 오퍼를 보낸 후 채팅을 통해 의뢰를 진행하게 됩니다.</p>
                           <p>Next.js를 이용한 SSR로 SEO를 최적화하고 <WhiteBold>미들웨어를 통해 관리자 페이지처럼 민감한 페이지의 노출을 차단</WhiteBold>할 수
                             있습니다.</p>
+                          <div style={{marginTop: '16px'}}>
+                            <div style={{display: "flex", gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/Typescript-%233178C6?style=flat-square&logo=Typescript&logoColor=%233178C6&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/NextJs-%20%23000000?style=flat-square&logo=Next.js&logoColor=%20%23000000&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/vercel-000000.svg?style=flat-square&logo=vercel&logoColor=000000&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/figma-FE5F50?style=flat-square&logo=figma&logoColor=FE5F50&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=F05032&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/github-181717.svg?style=flat-square&logo=github&logoColor=181717&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot&logoColor=6DB33F&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/aws-181717.svg?style=flat-square&logo=aws&logoColor=181717&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/java-FE5F50?style=flat-square&logo=java&logoColor=FE5F50&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=4479A1&labelColor=f9f9f9"/>
+                            </div>
+                          </div>
                         </div> : null}
                     </div>
                     <div className="project_img" style={{'flex': 1}}>
@@ -297,8 +324,37 @@ function App() {
                         <div className="project_notice">
                           <p>RideOn 은 자전거 이용자들을 위한 <WhiteBold>OPEN API 기반 통합 플랫폼</WhiteBold>입니다.</p>
                           <p>전국 자전거 도로 , 공공자전거 대여소 , 수리시설 , 날씨 등의 데이터를 실시간으로 활용하여 사용자에게 편리한 정보를 제공합니다.</p>
-                          <p>또한 , 자전거 지도 , 편의시설 정보 , 쇼핑 , 뉴스 , 커뮤니티 등 다양한 기능을 제공하여 라이더들이 더욱 쉽고 즐겁게 자전거 문화를 경험할 수 있도록 합니다.</p>
+                          <p>또한 , 자전거 지도 , 편의시설 정보 , 쇼핑 , 뉴스 , 커뮤니티 등 다양한 기능을 제공하여 라이더들이 더욱 쉽고 즐겁게 자전거 문화를 경험할 수 있도록
+                            합니다.</p>
                           <p><WhiteBold>Vue.js를 이용하여 구현</WhiteBold>하였고 현재 외부 API를 적극적으로 활용하여 프로젝트를 구축했습니다. </p>
+                          <div style={{marginTop: '16px'}}>
+                            <div style={{display: "flex", gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat-square&logo=JavaScript&logoColor=%23F7DF1E&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/Vue.js-%234FC08D?style=flat-square&logo=Vue.js&logoColor=%234FC08D&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/figma-FE5F50?style=flat-square&logo=figma&logoColor=FE5F50&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=F05032&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/github-181717.svg?style=flat-square&logo=github&logoColor=181717&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/docker-2496ED.svg?style=flat-square&logo=docker&logoColor=2496ED&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/nginx-009639.svg?style=flat-square&logo=nginx&logoColor=009639&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/Express-000000.svg?&style=flat-square&logo=Express&logoColor=000000&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/mongodb-47A248?style=flat-square&logo=mongodb&logoColor=47A248&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=4479A1&labelColor=f9f9f9"/>
+                            </div>
+                          </div>
                         </div> : null}
                     </div>
                     <div className="project_img" style={{'flex': 1}}>
@@ -357,6 +413,30 @@ function App() {
                           <p><WhiteBold>BitCoin Api</WhiteBold>를 이용하여코인의 히스토리를 가져와 차트에서 출력하고 <WhiteBold>코인
                             목록을 선택할<br/> 때마다 차트와 해당 코인의 세부 정보가 바뀌도록 구현했습니다.</WhiteBold></p>
                           <p>프론트는 기능적인 부분을 완성했고 AI를 기반으로한 Api 업데이트를 준비중 입니다. </p>
+                          <div style={{marginTop: '16px'}}>
+                            <div style={{display: "flex", gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/Typescript-%233178C6?style=flat-square&logo=Typescript&logoColor=%233178C6&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/React-20232a.svg?style=flat-square&logo=react&logoColor=61DAFB&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                            <img
+                                src="https://img.shields.io/badge/figma-FE5F50?style=flat-square&logo=figma&logoColor=FE5F50&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=F05032&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/github-181717.svg?style=flat-square&logo=github&logoColor=181717&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/nginx-009639.svg?style=flat-square&logo=nginx&logoColor=009639&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/fastapi-009688.svg?&style=flat-square&logo=fastapi&logoColor=009688&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/python-%3776AB?style=flat-square&logo=python&logoColor=%3776AB&labelColor=f9f9f9"/>
+                            </div>
+                          </div>
                         </div> : null}
                     </div>
                     <div className="project_img">
@@ -387,8 +467,31 @@ function App() {
                             프로젝트입니다.</p>
                           <p>특별한 라이브러리 사용은 하지 않았고 각각 클라이언트 별로 node.js를 이용하여 메시지를 전송하도록 구현했습니다.</p>
                           <p>채팅을 보내면 <WhiteBold>브로드캐스트 통신</WhiteBold>으로 모든 사용자에게 보내고 사용자 아이디에 uuid를 PK로 이용하여 해당 유저에게만 송신
-                            되도록
-                            구현했습니다.</p>
+                            되도록 구현했습니다.</p>
+                          <div style={{marginTop: '16px'}}>
+                            <div style={{display: "flex", gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/Typescript-%233178C6?style=flat-square&logo=Typescript&logoColor=%233178C6&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/React-20232a.svg?style=flat-square&logo=react&logoColor=61DAFB&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/figma-FE5F50?style=flat-square&logo=figma&logoColor=FE5F50&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=F05032&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/github-181717.svg?style=flat-square&logo=github&logoColor=181717&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/nginx-009639.svg?style=flat-square&logo=nginx&logoColor=009639&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=4479A1&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/Express-000000.svg?&style=flat-square&logo=Express&logoColor=000000&labelColor=f9f9f9"/>
+                            </div>
+                          </div>
                         </div> : null}
                     </div>
                     <div className="project_img">
@@ -426,6 +529,20 @@ function App() {
                             분류된 값을 수신측에 반환하도록 만들었습니다.</p>
                           <p>처음으로 AI를 써봐서 공부를 변행하면서 제작하였습니다.</p>
                           <p>코드 등은 KoBERT에서 제공하는 학습 코드를 개량하여 만들었습니다.</p>
+                          <div style={{marginTop: '16px'}}>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=F05032&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/github-181717.svg?style=flat-square&logo=github&logoColor=181717&labelColor=f9f9f9"/>
+                            </div>
+                            <div style={{display: "flex", marginTop: '8px', gap: '12px'}}>
+                              <img
+                                src="https://img.shields.io/badge/fastapi-009688.svg?&style=flat-square&logo=fastapi&logoColor=009688&labelColor=f9f9f9"/>
+                              <img
+                                src="https://img.shields.io/badge/python-%3776AB?style=flat-square&logo=python&logoColor=%3776AB&labelColor=f9f9f9"/>
+                            </div>
+                          </div>
                         </div> : null}
                     </div>
                     <div className="project_img">
